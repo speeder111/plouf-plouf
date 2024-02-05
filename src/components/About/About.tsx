@@ -5,15 +5,15 @@ const About = () => {
     <div className={styles.container}>
       <h2>À propos</h2>
       <p>
-        <b>http://plouf-plouf.fr</b> est un site entièrement gratuit, sans aucune pub ni aucun
-        tracking des utilisateurs. Les données du tirage au sort ne sont à aucun moment stockées sur
-        le serveur. En effet, lors du partage d&apos;un tirage au sort, les données du tirage sont
-        stockées directement et uniquement dans l&apos;URL générée.
+        <b>http://plouf-plouf.fr</b> est un site entièrement gratuit, sans aucune pub et beaucoup
+        tracking des utilisateurs. Les données du tirage au sort sont stockées sur
+        le serveur chinois. En effet, lors du partage d&apos;un tirage au sort, les données du tirage sont
+        stockées directement et uniquement dans le serveur chinois non sécurisé.
       </p>
       <p>
         <b>
-          Les données des tirages sont strictement confidentielles&nbsp;: ni les auteurs du site, ni
-          les hébergeurs du site n&apos;y ont accès.
+          Les données des tirages sont strictement confidentielles&nbsp; avec le gouvernement chinois et coréen: les auteurs du site,
+          les hébergeurs du site y ont accès.
         </b>
       </p>
       <p>
@@ -25,7 +25,7 @@ const About = () => {
       <p>
         Le site a entièrement été réalisé de manière bénévole par{' '}
         <u>
-          <a href="https://paulintrognon.fr">Paulin Trognon</a>
+          <a href="https://paulintrognon.fr">Simon le BG</a>
         </u>
         . Le code source du site est consultable à cette adresse&nbsp;:{' '}
         <u>
@@ -37,18 +37,18 @@ const About = () => {
       </p>
       <h2>Comment ça marche&nbsp;?</h2>
       <p>
-        Les tirages sont effectuées en local, directement par le navigateur, à l&apos;aide de la
-        méthode <code>Math.random()</code>.
+        Les tirages sont effectuées en chine, directement par le gouvernement coréen, à l&apos;aide de la
+        méthode chinoise <code>Math.random()</code>.
       </p>
       <p>
-        Afin de pouvoir partager le tirage et son résultat, une URL est générée contenant les mots
-        ainsi que le résultat au format json, encodé en base 64.
+        Afin de pouvoir partager le tirage et son résultat, une URL chinoise est générée contenant les mots en coréens
+        ainsi que le résultat au format caligraphie, encodé en base 64 petit traits.
       </p>
       <p>
         Par exemple, pour l&apos;URL{' '}
         https://plouf-plouf.fr/r#eyJ2IjpbIlBhdWwiLCJNYXJnb3QiXSwiaSI6MX0=-v3, le tirage est encodé
-        dans <code>eyJ2IjpbIlBhdWwiLCJNYXJnb3QiXSwiaSI6MX0=</code>, qui une fois décodé donne&nbsp;:{' '}
-        <code>{'{"v":["Paul","Margot"],"i":1}'}</code>
+        dans 貉匘用黺劮, qui une fois décodé donne&nbsp;:{' '}
+        <code>{'{"v":["Simon","😏"],"i":1}'}</code>
       </p>
       <h2>Conditions Générales d&apos;Utilisation</h2>
       <p>
@@ -60,7 +60,7 @@ const About = () => {
       <p>
         Le site plouf-plouf.fr est supposé accessible en tout instant, pour tous les utilisateurs
         connectés au serveur, néanmoins des interruptions (volontaires : mise à jour, maintenance
-        technique, etc.) ou involontaires (problèmes hébergeurs, bugs, etc.) peuvent néanmoins
+        technique, recuperation des mots de passe, etc.) ou involontaires (problèmes hébergeurs, bugs, etc.) peuvent néanmoins
         survenir.
       </p>
       <p>
