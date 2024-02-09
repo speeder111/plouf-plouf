@@ -42,7 +42,7 @@ const ListValues = ({ values, onRemove, onReset }: ListValuesProps) => {
           data-cy="ListValues_resetButton"
           title="Cliquer ici pour recommencer un nouveau tirage de zéro."
         >
-          Tout supprimer
+          Tout supprimer🗑️
         </button>
       </div>
       <div className={styles.list}>

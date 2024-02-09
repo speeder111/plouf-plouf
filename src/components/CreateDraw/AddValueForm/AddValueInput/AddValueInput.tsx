@@ -52,7 +52,7 @@ const AddValueInput = ({ startDrawAction, addValueAction }: AddValueInputProps) 
       return
     }
     // Else, if a new value is being entered, adds the new value to the draw.
-    addValueToDraw(enteredText)
+    addValueToDraw(enteredText) // ou addValueToDraw(enteredText + "😏")
     // Resets the entered text
     setEnteredText('')
   }

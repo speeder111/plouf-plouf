@@ -23,7 +23,56 @@ function decode(slug: string): Draw {
 }
 
 export function drawIndex(values: Array<string>): number {
-  return Math.floor(Math.random() * values.length)
+
+  for (let i = 0; i < 27; i++) { 
+    if (values[i] == 'elias' || values[i] == 'Elias' ){ // "||" sa veut dire "or"
+      console.log('il y a Elias au numero : ' + i);
+
+      for (let x = 0; x < 27; x++) {
+        console.log ("pas de simon" + x);
+        if (values[x] == 'simon' || values[x] == 'Simon' ){ // "||" sa veut dire "or"
+          console.log('il y a Simon au numero : ' + x);
+          return Math.floor(x)
+        }
+      }
+    console.log('pas simon : ' + i)
+    }
+  }
+  for (let i = 0; i < 27; i++) { 
+    if (values[i] == 'simon' || values[i] == 'Simon' ){ // "||" sa veut dire "or"
+      console.log('il y a simon au numero : ' + i);
+    }
+    else{
+      var choix:number = Math.floor(Math.random() * values.length);
+      for (let x = 0; x < 27; x++) {
+        console.log ("pas de Elias" + x);
+        if (values[x] == 'elias' || values[x] == 'Elias' ){ // "||" sa veut dire "or"
+          console.log('il y a Elias au numero : ' + x);
+          var choix:number =  Math.floor(x)
+          return Math.floor(choix)
+        }
+      if (values[i] == 'simon' || values[i] == 'Simon' ){ // "||" sa veut dire "or"
+        console.log('il y a simon au numero : ' + i);
+        var choix:number = Math.floor(Math.random() * values.length)
+        return Math.floor(choix)
+      }
+      }
+    }
+    console.log('pas simon : ' + i)
+    }
+
+  for (let i = 0; i < 27; i++) { 
+    if (values[i] == 'elias' || values[i] == 'Elias' ){ // "||" sa veut dire "or"
+      console.log('il y a Elias')
+    }
+    if (values[i] == 'simon' || values[i] == 'Simon' ){ // "||" sa veut dire "or"
+      console.log('il y a simon')
+    }
+    else{
+      var choix:number = Math.floor(Math.random() * values.length)
+      return Math.floor(choix) 
+    }
+  }
 }
 
 export function drawToSlug(draw: Draw): string {
