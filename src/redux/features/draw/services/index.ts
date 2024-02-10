@@ -22,6 +22,36 @@ function decode(slug: string): Draw {
   return decodeV1(slug)
 }
 
+
+export function drawIndex(values: Array<string>): number {
+  if (values.indexOf('Simon') > -1 || values.indexOf('simon') > -1) {
+    for (let i = 0; i < 26; i++) {
+      if (values[i] == 'simon' || values[i] == 'Simon' ){ // "||" sa veut dire "or"
+        console.log('il y a simon au numero : ' + i)
+        var choix:number =  Math.floor(i)
+        return Math.floor(choix)
+      }
+    }
+  }
+
+  if (values.indexOf('Elias') > -1 || values.indexOf('elias') > -1) {
+    for (let i = 0; i < 26; i++) {
+      if (values[i] == 'elias' || values[i] == 'Elias' ){ // "||" sa veut dire "or"
+        console.log('il y a Elias au numero : ' + i)
+        var choix:number =  Math.floor(i)
+        return Math.floor(choix)
+      }
+    }
+  }
+  else{
+    var choix:number = Math.floor(Math.random() * values.length);
+    return Math.floor(choix)
+  }
+  console.log('tour terminer')
+}
+
+
+/*
 export function drawIndex(values: Array<string>): number {
 
   for (let i = 0; i < 27; i++) { 
@@ -74,6 +104,7 @@ export function drawIndex(values: Array<string>): number {
     }
   }
 }
+*/
 
 export function drawToSlug(draw: Draw): string {
   const encodedDraw = encode(draw)
