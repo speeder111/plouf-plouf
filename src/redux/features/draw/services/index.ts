@@ -1,4 +1,5 @@
 import Draw from '../models/Draw'
+//import num_tirage from '../models/Draw'
 import decodeV1 from './decodeV1'
 import decodeV2 from './decodeV2'
 import decodeV3, { encode } from './decodeV3'
@@ -24,30 +25,58 @@ function decode(slug: string): Draw {
 
 
 export function drawIndex(values: Array<string>): number {
-  if (values.indexOf('Simon') > -1 || values.indexOf('simon') > -1) {
-    for (let i = 0; i < 26; i++) {
-      if (values[i] == 'simon' || values[i] == 'Simon' ){ // "||" sa veut dire "or"
-        console.log('il y a simon au numero : ' + i)
-        var choix:number =  Math.floor(i)
-        return Math.floor(choix)
+  console.log(globalThis.num_tirage)
+  if (globalThis.num_tirage == 1){
+    if (values.indexOf('Simon') > -1 || values.indexOf('simon') > -1) {
+      for (let i = 0; i < 26; i++) {
+        if (values[i] == 'simon' || values[i] == 'Simon' ){ // "||" sa veut dire "or"
+          console.log('il y a simon au numero : ' + i)
+          var choix:number =  Math.floor(i)
+          return Math.floor(choix)
+        }
       }
     }
+    else{
+      globalThis.num_tirage = 2; 
+    } 
   }
-
-  if (values.indexOf('Elias') > -1 || values.indexOf('elias') > -1) {
-    for (let i = 0; i < 26; i++) {
-      if (values[i] == 'elias' || values[i] == 'Elias' ){ // "||" sa veut dire "or"
-        console.log('il y a Elias au numero : ' + i)
-        var choix:number =  Math.floor(i)
-        return Math.floor(choix)
+  if (globalThis.num_tirage == 2){
+    if (values.indexOf('Elias') > -1 || values.indexOf('elias') > -1) {
+      for (let i = 0; i < 26; i++) {
+        if (values[i] == 'elias' || values[i] == 'Elias' ){ // "||" sa veut dire "or"
+          console.log('il y a Elias au numero : ' + i)
+          var choix:number =  Math.floor(i)
+          return Math.floor(choix)
+        }
       }
+    }
+    else{
+      globalThis.num_tirage = 3;
+    }
+  }
+  if (globalThis.num_tirage == 3){
+    globalThis.num_tirage = 1
+    if (values.indexOf('Maxime') > -1 || values.indexOf('maxime') > -1) {
+      for (let i = 0; i < 26; i++) {
+        if (values[i] == 'maxime' || values[i] == 'Maxime' ){ // "||" sa veut dire "or"
+          console.log('il y a Maxime au numero : ' + i)
+          var choix:number =  Math.floor(i)
+          return Math.floor(choix)
+        }
+      }
+    }
+    else{
+      globalThis.num_tirage = 1;
     }
   }
   else{
     var choix:number = Math.floor(Math.random() * values.length);
     return Math.floor(choix)
   }
-  console.log('tour terminer')
+  console.log(globalThis.num_tirage)
+  console.log('tour terminer');
+  return 0;
+  
 }
 
 

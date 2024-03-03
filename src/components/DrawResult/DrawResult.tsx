@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
+//import Image from 'next/image'
 import React from 'react'
 
 import Animation from '../../redux/features/animation/models/Animation'
@@ -29,7 +29,7 @@ export const DrawResult = ({
     return (
       <div className={styles.error}>
         <p>
-          <Image src="/sad.jpg" alt="Sad cat drawing" width={250} height={161} />
+
         </p>
         <p>Impossible de charger le tirage au sort à partir de cette url...</p>
       </div>

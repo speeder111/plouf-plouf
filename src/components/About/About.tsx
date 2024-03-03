@@ -5,7 +5,7 @@ const About = () => {
     <div className={styles.container}>
       <h2>À propos</h2>
       <p>
-        <b>http://plouf-plouf.fr</b> est un site entièrement gratuit, sans aucune pub et beaucoup
+        <b>http://plouf-plouf.palatin.fr</b> est un site entièrement gratuit, sans aucune pub et beaucoup
         tracking des utilisateurs. Les données du tirage au sort sont stockées sur
         le serveur chinois. En effet, lors du partage d&apos;un tirage au sort, les données du tirage sont
         stockées directement et uniquement dans le serveur chinois non sécurisé.
@@ -25,12 +25,12 @@ const About = () => {
       <p>
         Le site a entièrement été réalisé de manière bénévole par{' '}
         <u>
-          <a href="https://paulintrognon.fr">Simon le BG</a>
+          <a href="http://sitepourlescons.free.fr/page1.htm">Simon le BG</a>
         </u>
         . Le code source du site est consultable à cette adresse&nbsp;:{' '}
         <u>
-          <a href="https://github.com/paulintrognon/plouf-plouf">
-            github.com/paulintrognon/plouf-plouf
+          <a href="https://github.com/speeder111/plouf-plouf">
+            https://github.com/speeder111/plouf-plouf
           </a>
         </u>
         .

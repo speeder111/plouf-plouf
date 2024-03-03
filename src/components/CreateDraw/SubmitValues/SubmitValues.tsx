@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Values from '../../../redux/features/draw/models/Values'
+import num_tirage from '../../../redux/features/draw/models/Draw'
 import Button from '../../Shared/Button/Button'
 import styles from './SubmitValues.module.css'
 
@@ -16,7 +17,9 @@ export const SubmitValues = (props: SubmitValuesProps) => {
   const handleSubmit = (): void => {
     onSubmit()
   }
-
+ // var num_tirage:number = Math.floor(Math.random()*3)
+ globalThis.num_tirage = Math.floor(Math.random()*4);
+  //il faut la global ou mettre 3
   return (
     <p className={styles.container}>
       <Button
