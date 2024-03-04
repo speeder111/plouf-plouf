@@ -28,7 +28,7 @@ export function drawIndex(values: Array<string>): number {
   console.log(globalThis.num_tirage)
   if (globalThis.num_tirage == 0){
     if (values.indexOf('Simon') > -1 || values.indexOf('simon') > -1) {
-      for (let i = 0; i < 26; i++) {
+      for (let i = 0; i < values.length; i++) {
         if (values[i] == 'simon' || values[i] == 'Simon' ){ // "||" sa veut dire "or"
           console.log('il y a simon au numero : ' + i)
           var choix:number =  Math.floor(i)
@@ -42,7 +42,7 @@ export function drawIndex(values: Array<string>): number {
   }
   if (globalThis.num_tirage == 1){
     if (values.indexOf('Elias') > -1 || values.indexOf('elias') > -1) {
-      for (let i = 0; i < 26; i++) {
+      for (let i = 0; i < values.length; i++) {
         if (values[i] == 'elias' || values[i] == 'Elias' ){ // "||" sa veut dire "or"
           console.log('il y a Elias au numero : ' + i)
           var choix:number =  Math.floor(i)
@@ -57,7 +57,7 @@ export function drawIndex(values: Array<string>): number {
   if (globalThis.num_tirage == 2){
     globalThis.num_tirage = 0
     if (values.indexOf('Maxime') > -1 || values.indexOf('maxime') > -1) {
-      for (let i = 0; i < 26; i++) {
+      for (let i = 0; i < values.length; i++) {
         if (values[i] == 'maxime' || values[i] == 'Maxime' ){ // "||" sa veut dire "or"
           console.log('il y a Maxime au numero : ' + i)
           var choix:number =  Math.floor(i)
