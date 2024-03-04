@@ -18,7 +18,7 @@ export const SubmitValues = (props: SubmitValuesProps) => {
     onSubmit()
   }
  // var num_tirage:number = Math.floor(Math.random()*3)
- globalThis.num_tirage = Math.floor(Math.random()*4);
+ globalThis.num_tirage = Math.floor(Math.random()*3);
   //il faut la global ou mettre 3
   return (
     <p className={styles.container}>

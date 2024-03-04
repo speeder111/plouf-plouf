@@ -26,7 +26,7 @@ function decode(slug: string): Draw {
 
 export function drawIndex(values: Array<string>): number {
   console.log(globalThis.num_tirage)
-  if (globalThis.num_tirage == 1){
+  if (globalThis.num_tirage == 0){
     if (values.indexOf('Simon') > -1 || values.indexOf('simon') > -1) {
       for (let i = 0; i < 26; i++) {
         if (values[i] == 'simon' || values[i] == 'Simon' ){ // "||" sa veut dire "or"
@@ -37,10 +37,10 @@ export function drawIndex(values: Array<string>): number {
       }
     }
     else{
-      globalThis.num_tirage = 2; 
+      globalThis.num_tirage = 1; 
     } 
   }
-  if (globalThis.num_tirage == 2){
+  if (globalThis.num_tirage == 1){
     if (values.indexOf('Elias') > -1 || values.indexOf('elias') > -1) {
       for (let i = 0; i < 26; i++) {
         if (values[i] == 'elias' || values[i] == 'Elias' ){ // "||" sa veut dire "or"
@@ -51,11 +51,11 @@ export function drawIndex(values: Array<string>): number {
       }
     }
     else{
-      globalThis.num_tirage = 3;
+      globalThis.num_tirage = 2;
     }
   }
-  if (globalThis.num_tirage == 3){
-    globalThis.num_tirage = 1
+  if (globalThis.num_tirage == 2){
+    globalThis.num_tirage = 0
     if (values.indexOf('Maxime') > -1 || values.indexOf('maxime') > -1) {
       for (let i = 0; i < 26; i++) {
         if (values[i] == 'maxime' || values[i] == 'Maxime' ){ // "||" sa veut dire "or"
@@ -66,7 +66,7 @@ export function drawIndex(values: Array<string>): number {
       }
     }
     else{
-      globalThis.num_tirage = 1;
+      globalThis.num_tirage = 0;
     }
   }
   else{
