@@ -69,13 +69,12 @@ export function drawIndex(values: Array<string>): number {
       globalThis.num_tirage = 0;
     }
   }
-  else{
-    var choix:number = Math.floor(Math.random() * values.length);
-    return Math.floor(choix)
-  }
+  
+  var choix:number = Math.floor(Math.random() * values.length);
   console.log(globalThis.num_tirage)
   console.log('tour terminer');
-  return 0;
+  return Math.floor(choix)
+  
   
 }
 
